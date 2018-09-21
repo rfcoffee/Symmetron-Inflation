@@ -5,7 +5,7 @@ using namespace std;
 
 // define the dimensionless constants
 const double c    = 13;      
-const double b      = 1.0e12; // 1.0e-4; //1.0e6;  //100;
+const double b      = 1.0e12; 
       double a     = pow(c,2.0)/100;        // used the relation M = 10 Mp
 
 // derived constants
@@ -48,7 +48,7 @@ double hubble(
       double dphi,
       double dchi){
 
-      return c * pow(1.0/3.0 * ( -V(1.0) + den_phi(phi,chi,dphi,dchi) + R * den_chi(phi,chi,dphi,dchi)) ,0.5);   //   
+      return c * pow(1.0/3.0 * ( -V(1.0) + den_phi(phi,chi,dphi,dchi) + R * den_chi(phi,chi,dphi,dchi)) ,0.5);     
 }
 double Veff(
       double phi,
@@ -133,13 +133,13 @@ double epsilon(
 }
 int main(){
 	  /* Test the symmetron model for different choices of initial conditions for phi and chi fields */
-      double phi    = 0.01; //0.818973; //0.0243837;   //0.0101014;  //0.00924935; //0.01; //0.0124481;  //0.00924943; //0.01; //0.0001; //0.01;
-      double dphi   = 0;   //0.0687869; //0.00214899;  //0.000890267; //0.000814808; //0;    //0.00109709; //0.000814816; //0; //0.0001; //0.01;
-      double chi    = 1.0e2; //1.0e6; //0;//(-9.88131e-324;) //1.09402e-05;  //0.00487858; //1.0e5; //-5.92879e-323; //0.00620518; //1.0e5; //1.0/sqrt(2.0) ;
-      double dchi   = 0;    //0;//(-5.24751e-317;)  //-17.7571;    //-3854.41;   //0;     //3.89013e-318;  //-322.902 ; //0; //20/sqrt(b); //1/sqrt(2.0)/sqrt(b);
+      double phi    = 0.01; 
+      double dphi   = 0;  
+      double chi    = 1.0e2; 
+      double dchi   = 0;     
       
-      double t      = 0; //51.9948; //11.9988;   //1.9998;   //0.9999;   //0; 
-      double efolds = -60; //128.276;  //-7.53769;  //-45.0513; //-48.8034; //-60.0;
+      double t      = 0; 
+      double efolds = -60; 
       double Hubble = 0;
       double den__phi = 0;
       double den__chi = 0;            // density of phi and chi fields in units of the vacuum energy
@@ -148,7 +148,7 @@ int main(){
       double scale   = 0;            // scale factor
       double Epsilon = 0;
       double h     = 0.00000001;
-      double hh    = 10.0 * h;   //40*h;   //10 * h;
+      double hh    = 10.0 * h;  
       int    nsteps = 1000000000;
       double k1,k2,k3,k4,j1,j2,j3,j4,l1,l2,l3,l4,m1,m2,m3,m4;
       int i,j;
